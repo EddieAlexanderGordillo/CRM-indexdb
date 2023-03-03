@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM - IndexedDB Administrador de Citas</title>
+    <link rel="stylesheet" href="../src/style/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="aside">
+        <h1 class="aside-title">CRM - IndexedDB</h1>
+        <p class="aside-text">Administra tus Clientes con el CRM - IndexedDB</p>
+        <nav class="nav">
+          <a href="/">Clientes</a>
+          <a href="./nuevo-cliente.html">Nuevo Cliente</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <h2 class="main-title">Clientes</h2>
+        <p class="main-text">No hay Clientes</p>
+        <div class="container-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre Cliente</th>
+                <th>Teléfono</th>
+                <th>Empresa</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="listado-clientes" class=""></tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="../src/index.js"></script>
+  </body>
+</html>

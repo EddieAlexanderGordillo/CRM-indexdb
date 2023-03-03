@@ -1,0 +1,259 @@
+:root {
+    --almostWhite: #fafafa;
+    --mediumGray: #718096;
+    --gray: #4a5568;
+    --almostBlack: hsl(0, 0%, 8%);
+    --primary: #319795;
+    --primaryHover: #2c7a7b;
+    --borderFocus: #a0ccf0;
+    --whiteBackground: #edf2f7;
+    --greenDark: #155724;
+    --greenLight: #28B62C;
+    --redDark: #ff291d;
+    --redLight: #FF4136;
+
+}
+
+/* generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* aside */
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.aside {
+    padding: 80px 20px;
+    background-color: var(--primary);
+    color: var(--almostWhite);
+}
+
+.aside-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.aside-text {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+}
+
+.nav a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--almostWhite);
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 4px 12px;
+}
+
+.nav a:hover,
+.nav a:active {
+    background-color: var(--primaryHover);
+}
+
+/* main */
+.main {
+    width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--whiteBackground);
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--almostBlack);
+}
+
+.main-text {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    color: var(--mediumGray);
+}
+
+.container-table {
+
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-table table {
+    width: 50%;
+}
+
+.container-table thead {
+    width: 95%;
+    background-color: var(--almostWhite);
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.container-table thead th {
+    font-size: 1.4rem;
+    padding: 12px 24px;
+    color: var(--mediumGray);
+}
+
+.celda {
+    padding: 16px 24px;
+    border: 2px solid var(--almostWhite);
+    text-align: center;
+    color: var(--gray);
+    background-color: var(--almostWhite)
+}
+
+.container-form {
+    margin-top: 40px;
+}
+
+.celda__nombre {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.celda__correo {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.celda__telefono {
+    font-size: 1.6rem;
+}
+
+.editar {
+    color: var(--borderFocus);
+    font-size: 1.4rem;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.eliminar {
+    color: #E53E3E;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 10%);
+    background-color: var(--almostWhite);
+}
+
+.field-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.field-label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.field-input {
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0
+}
+
+.field-input:focus {
+    outline: none;
+    border: 2px solid #a0ccf0;
+}
+
+.btn-agregar {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 20px;
+    padding: 10px 12px;
+    border: none;
+    color: var(--almostWhite);
+    background-color: var(--primary);
+}
+
+.btn-agregar:hover {
+    background-color: var(--primaryHover);
+}
+
+.alerta {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 12px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.erroraleta {
+    color: var(--almostWhite);
+    border: 1px solid var(--redDark);
+    border-radius: 5px;
+    background: var(--redLight);
+}
+
+.correctoalerta {
+    color: var(--almostWhite);
+    border: 1px solid var(--greenLight);
+    border-radius: 5px;
+    background-color: var(--greenLight);
+}
+
+@media (min-width: 820px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .aside {
+        width: 25%;
+        height: 100vh;
+    }
+
+    .main {
+        width: 75%;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .container-table table {
+        width: 80%;
+    }
+}

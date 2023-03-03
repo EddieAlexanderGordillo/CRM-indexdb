@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM - IndexedDB</title>
+    <link rel="stylesheet" href="../src/style/style.css" />
+  </head>
+  <body>
+     <div class="container">
+      <aside class="aside">
+        <h1 class="aside-title">CRM - IndexedDB</h1>
+        <p class="aside-text">Administra tus Clientes con el CRM - IndexedDB</p>
+        <nav class="nav">
+          <a href="./index.html">Clientes</a>
+          <a href="./nuevo-cliente.html">Nuevo Cliente</a>
+        </nav>
+      </aside>
+      <main class="main">
+        <h2 class="main-title">Editar Cliente</h2>
+        <div class="container-form">
+            <form id="formulario" class="form">
+                <div class="field-container">
+                    <label class="field-label" for="nombre">Nombre</label>
+                    <input class="field-input" id="nombre" type="text" placeholder="Nombre Cliente">
+                </div>
+                <div class="field-container">
+                    <label class="field-label" for="correo">Correo</label>
+                    <input class="field-input" id="email" type="email" placeholder="Email Cliente">
+                </div>
+                <div class="field-container">
+                    <label class="field-label" for="telefono">Teléfono</label>
+                    <input class="field-input" autofocus id="telefono" type="tel" placeholder="Teléfono Cliente">
+                </div>
+                <div class="field-container">
+                    <label class="field-label" for="empresa">Empresa</label>
+                    <input class="field-input" id="empresa" type="text" placeholder="Empresa Cliente">
+                </div>
+                  <input type="hidden" name="id" id="id" value="">
+
+                    <input
+                        type="submit"
+                        class="btn-agregar"
+                        value="Editar Cliente"
+                        />
+            </form>
+        </div>
+
+      </main>
+    <script src="../src/editar-cliente.js"></script>
+  </body>
+</html>
